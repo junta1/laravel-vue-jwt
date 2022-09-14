@@ -8,6 +8,6 @@ export default {
             next('/');
         }
 
-        next('/about');
+        next();
     }
 }
