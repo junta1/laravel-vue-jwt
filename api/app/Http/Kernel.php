@@ -69,5 +69,6 @@ class Kernel extends HttpKernel
         'jwt.refresh' => 'Tymon\JWTAuth\Middleware\RefreshToken',
 
         'api.key' => \App\Http\Middleware\ApiToken::class,
+        'verify.mobile' => \App\Http\Middleware\VerifyMobile::class,
     ];
 }

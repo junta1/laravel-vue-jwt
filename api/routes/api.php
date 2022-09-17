@@ -33,8 +33,8 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::delete('delete/{product}',  [ProductController::class, 'destroy']);
 });
 
-Route::group(['middleware' => ['api.key']], function () {
+Route::group(['middleware' => ['api.key', 'verify.mobile']], function () {
     Route::get('mobile', function () {
-        return 'Token protegido por api key';
+        return 'Token protegido por api key e permite apenas dispositivos móveis.';
     });
 });
